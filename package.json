@@ -51,7 +51,7 @@
     "jest": "27.0.6",
     "lint-staged": "^11.0.1",
     "np": "7.5.0",
-    "prettier": "2.3.2",
+    "prettier": "2.4.1",
     "pretty-quick": "3.1.1",
     "rimraf": "3.0.2",
     "rollup": "2.53.2",
