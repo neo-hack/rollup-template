@@ -42,7 +42,7 @@
     "@aiou/eslint-config": "^0.2.2",
     "@changesets/cli": "^2.17.0",
     "@rollup/plugin-alias": "^3.1.4",
-    "@rollup/plugin-commonjs": "^19.0.2",
+    "@rollup/plugin-commonjs": "^21.0.0",
     "@rollup/plugin-node-resolve": "^13.0.4",
     "@types/jest": "27.0.2",
     "cz-emoji": "^1.3.1",
