@@ -5,7 +5,7 @@
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/github/spring-catponents/actions-template)
 
-# features
+## features
 
 - 📊 Stats - output bag bundlesize
 - 📦 exclude `dependencies` and `peerDependencies`
@@ -21,4 +21,11 @@ pnpm add @aiou/rollup-template
 
 - **Setup** - `pnpm i`
 - **Build** - `pnpm build`
+
+# 
+<div align='right'>
+
+*built with ❤️ by 😼*
+
+</div>
 
