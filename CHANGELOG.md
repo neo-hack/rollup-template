@@ -1,5 +1,11 @@
 # @aiou/rollup-template
 
+## 1.7.10
+
+### Patch Changes
+
+- f9697b6: upgrade husky
+
 ## 1.7.9
 
 ### Patch Changes
