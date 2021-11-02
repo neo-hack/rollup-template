@@ -2,16 +2,20 @@
   "name": "@aiou/rollup-template",
   "version": "1.7.10",
   "license": "MIT",
-  "homepage": "https://github.com/spring-catponents/actions-template#readme",
+  "homepage": "https://github.com/spring-catponents/rollup-template#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/spring-catponents/actions-template"
+    "url": "git+https://github.com/spring-catponents/rollup-template.git"
   },
   "bugs": {
-    "url": "https://github.com/spring-catponents/actions-template/issues",
+    "url": "https://github.com/spring-catponents/rollup-template/issues",
     "email": "jiangweixian1994@gmail.com"
   },
-  "author": "JW <jiangweixian1994@gmail.com> (https://twitter.com/jiangweixian)",
+  "author": {
+    "name": "JW",
+    "email": "jiangweixian1994@gmail.com",
+    "url": "https://twitter.com/jiangweixian"
+  },
   "main": "lib/rollup-template.cjs.js",
   "module": "lib/rollup-template.esm.js",
   "browser": "lib/rollup-template.umd.js",
@@ -24,15 +28,13 @@
     "release": "pnpm run build && np --no-cleanup --yolo --no-publish --any-branch",
     "ci:version": "pnpx changeset version",
     "ci:publish": "pnpx changeset publish",
-    "prepare": "husky install"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "prepare": "husky install",
+    "ci:snapshot": "pnpx changeset version --snapshot beta",
+    "ci:prerelease": "pnpm run build && pnpx changeset publish --tag beta",
+    "lint:fix": "eslint . --fix"
   },
   "lint-staged": {
-    "**/**/*.{js,ts,vue,json}": [
+    "**/**/*.{js,ts,tsx,vue,json}": [
       "eslint --fix"
     ]
   },
@@ -40,7 +42,7 @@
     "functional-md": "^1.1.0"
   },
   "devDependencies": {
-    "@aiou/eslint-config": "^0.2.2",
+    "@aiou/eslint-config": "^0.3.2",
     "@changesets/cli": "^2.17.0",
     "@rollup/plugin-alias": "^3.1.4",
     "@rollup/plugin-commonjs": "^21.0.0",
