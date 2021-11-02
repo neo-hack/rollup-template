@@ -1,5 +1,11 @@
 # @aiou/rollup-template
 
+## 1.8.0
+
+### Minor Changes
+
+- 690789f: neo prepack
+
 ## 1.7.10
 
 ### Patch Changes
