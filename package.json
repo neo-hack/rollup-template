@@ -2,13 +2,13 @@
   "name": "@aiou/rollup-template",
   "version": "1.7.10",
   "license": "MIT",
-  "homepage": "https://github.com/spring-catponents/actions-template#readme",
+  "homepage": "https://github.com/spring-catponents/rollup-template#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/spring-catponents/actions-template.git"
+    "url": "git+https://github.com/spring-catponents/rollup-template.git"
   },
   "bugs": {
-    "url": "https://github.com/spring-catponents/actions-template/issues",
+    "url": "https://github.com/spring-catponents/rollup-template/issues",
     "email": "jiangweixian1994@gmail.com"
   },
   "author": {
