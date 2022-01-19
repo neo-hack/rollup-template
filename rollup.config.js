@@ -2,8 +2,7 @@ import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import typescript from 'rollup-plugin-typescript2'
 import alias from '@rollup/plugin-alias'
-import excludeDependenciesFromBundle from 'rollup-plugin-exclude-dependencies-from-bundle'
-import bundleSize from 'rollup-plugin-bundle-size'
+import size from 'rollup-plugin-size'
 import pkg from './package.json'
 
 export default [
@@ -20,12 +19,7 @@ export default [
         resolve: ['.ts', '.js', '.tsx', '.jsx'],
         entries: [{ find: '@/', replacement: './src/' }],
       }),
-      // exclude dependencies and peerDependencies
-      excludeDependenciesFromBundle({
-        peerDependencies: true,
-      }),
-      // console.log bundle file size
-      bundleSize(),
+      size(),
     ],
     output: {
       name: 'rollup-template',
@@ -42,14 +36,15 @@ export default [
   // `file` and `format` for each target)
   {
     input: 'src/index.ts',
-    external: ['ms'],
     plugins: [
-      typescript(), // so Rollup can convert TypeScript to JavaScript
+      typescript({
+        typescript: require('typescript'),
+      }), // so Rollup can convert TypeScript to JavaScript
       alias({
         resolve: ['.ts', '.js', '.tsx', '.jsx'],
         entries: [{ find: '@/', replacement: './src/' }],
       }),
-      bundleSize(),
+      size(),
     ],
     output: [
       { file: pkg.main, format: 'cjs' },
