@@ -3,9 +3,11 @@ import commonjs from '@rollup/plugin-commonjs'
 import typescript from 'rollup-plugin-typescript2'
 import alias from '@rollup/plugin-alias'
 import size from 'rollup-plugin-size'
+import { defineConfig } from 'rollup'
+
 import pkg from './package.json'
 
-export default [
+export default defineConfig([
   // browser-friendly UMD build
   {
     input: 'src/index.ts',
@@ -51,4 +53,4 @@ export default [
       { file: pkg.module, format: 'es' },
     ],
   },
-]
+])
