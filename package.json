@@ -2,13 +2,13 @@
   "name": "@aiou/rollup-template",
   "version": "1.7.10",
   "license": "MIT",
-  "homepage": "https://github.com/spring-catponents/rollup-template#readme",
+  "homepage": "https://github.com/neo-hack/rollup-template#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/spring-catponents/rollup-template.git"
+    "url": "git+https://github.com/neo-hack/rollup-template.git"
   },
   "bugs": {
-    "url": "https://github.com/spring-catponents/rollup-template/issues",
+    "url": "https://github.com/neo-hack/rollup-template/issues",
     "email": "jiangweixian1994@gmail.com"
   },
   "author": {
@@ -25,10 +25,10 @@
     "dev": "rollup -c -w --silent",
     "test": "jest",
     "pretest": "pnpm run build",
+    "prepare": "husky install",
     "release": "pnpm run build && np --no-cleanup --yolo --no-publish --any-branch",
     "ci:version": "pnpx changeset version",
     "ci:publish": "pnpx changeset publish",
-    "prepare": "husky install",
     "ci:snapshot": "pnpx changeset version --snapshot beta",
     "ci:prerelease": "pnpm run build && pnpx changeset publish --tag beta",
     "lint:fix": "eslint . --fix"
