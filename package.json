@@ -16,10 +16,18 @@
     "email": "jiangweixian1994@gmail.com",
     "url": "https://twitter.com/jiangweixian"
   },
-  "main": "lib/rollup-template.cjs.js",
-  "module": "lib/rollup-template.esm.js",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
   "browser": "lib/rollup-template.umd.js",
-  "typings": "lib/index.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "rimraf lib && rollup -c --silent",
     "dev": "rollup -c -w --silent",
@@ -55,7 +63,6 @@
     "husky": "^7.0.4",
     "jest": "27.2.5",
     "lint-staged": "^11.2.6",
-    "np": "7.5.0",
     "prettier": "2.4.1",
     "rimraf": "3.0.2",
     "rollup": "2.58.0",

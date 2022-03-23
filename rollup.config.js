@@ -1,8 +1,10 @@
 import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import typescript from 'rollup-plugin-typescript2'
+import externals from 'rollup-plugin-node-externals'
 import alias from '@rollup/plugin-alias'
 import size from 'rollup-plugin-size'
+import ce from 'rollup-plugin-condition-exports'
 import { defineConfig } from 'rollup'
 
 import pkg from './package.json'
@@ -12,11 +14,9 @@ export default defineConfig([
   {
     input: 'src/index.ts',
     plugins: [
-      resolve(), // so Rollup can find `ms`
-      commonjs(), // so Rollup can convert `ms` to an ES module
-      typescript({
-        typescript: require('typescript'),
-      }), // so Rollup can convert TypeScript to JavaScript
+      resolve(),
+      commonjs(),
+      typescript(),
       alias({
         resolve: ['.ts', '.js', '.tsx', '.jsx'],
         entries: [{ find: '@/', replacement: './src/' }],
@@ -39,18 +39,28 @@ export default defineConfig([
   {
     input: 'src/index.ts',
     plugins: [
-      typescript({
-        typescript: require('typescript'),
-      }), // so Rollup can convert TypeScript to JavaScript
+      /**
+       * Bundle devDependencies, exclude dependencies
+       */
+      externals({
+        devDeps: false,
+      }),
+      typescript(),
       alias({
         resolve: ['.ts', '.js', '.tsx', '.jsx'],
         entries: [{ find: '@/', replacement: './src/' }],
       }),
+      resolve(),
+      /**
+       * Auto setup package.json
+       * @see {@link https://github.com/JiangWeixian/rollup-plugin-condition-exports}
+       */
+      ce(),
       size(),
     ],
     output: [
-      { file: pkg.main, format: 'cjs' },
-      { file: pkg.module, format: 'es' },
+      { dir: 'dist', entryFileNames: '[name].cjs', format: 'cjs' },
+      { dir: 'dist', entryFileNames: '[name].mjs', format: 'es' },
     ],
   },
 ])
