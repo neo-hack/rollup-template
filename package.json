@@ -26,10 +26,10 @@
   },
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
-  "browser": "lib/rollup-template.umd.js",
+  "browser": "dist/rollup-template.umd.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "rimraf lib && rollup -c --silent",
+    "build": "rimraf dist && rollup -c --silent",
     "dev": "rollup -c -w --silent",
     "test": "jest",
     "pretest": "pnpm run build",
