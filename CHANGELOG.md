@@ -1,5 +1,16 @@
 # @aiou/rollup-template
 
+## 1.9.0
+
+### Minor Changes
+
+- f0b25db: use mario
+
+### Patch Changes
+
+- f0b25db: upgrade eslint and rollup-plugin
+- f0b25db: defineconfig from rollup
+
 ## 1.8.0
 
 ### Minor Changes
