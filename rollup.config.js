@@ -1,35 +1,13 @@
 import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import typescript from 'rollup-plugin-typescript2'
-import externals from 'rollup-plugin-node-externals'
+import { externals } from 'rollup-plugin-node-externals'
 import alias from '@rollup/plugin-alias'
 import size from 'rollup-plugin-size'
 import ce from 'rollup-plugin-condition-exports'
 import { defineConfig } from 'rollup'
 
-import pkg from './package.json'
-
 export default defineConfig([
-  // browser-friendly UMD build
-  {
-    input: 'src/index.ts',
-    plugins: [
-      resolve(),
-      commonjs(),
-      typescript(),
-      alias({
-        resolve: ['.ts', '.js', '.tsx', '.jsx'],
-        entries: [{ find: '@/', replacement: './src/' }],
-      }),
-      size(),
-    ],
-    output: {
-      name: 'rollup-template',
-      file: pkg.browser,
-      format: 'umd',
-    },
-  },
-
   // CommonJS (for Node) and ES module (for bundlers) build.
   // (We could have three entries in the configuration array
   // instead of two, but it's quicker to generate multiple
@@ -45,6 +23,7 @@ export default defineConfig([
       externals({
         devDeps: false,
       }),
+      commonjs(),
       typescript(),
       alias({
         resolve: ['.ts', '.js', '.tsx', '.jsx'],
