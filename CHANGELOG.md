@@ -1,5 +1,11 @@
 # @aiou/rollup-template
 
+## 1.9.1
+
+### Patch Changes
+
+- 6a0ae97: fix dts files build
+
 ## 1.9.0
 
 ### Minor Changes
