@@ -3,7 +3,7 @@ import commonjs from '@rollup/plugin-commonjs'
 import typescript from 'rollup-plugin-typescript2'
 import { externals } from 'rollup-plugin-node-externals'
 import alias from '@rollup/plugin-alias'
-import size from 'rollup-plugin-size'
+import size from 'rollup-plugin-filesize'
 import ce from 'rollup-plugin-condition-exports'
 import { defineConfig } from 'rollup'
 
