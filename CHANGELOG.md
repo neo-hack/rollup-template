@@ -1,5 +1,15 @@
 # @aiou/rollup-template
 
+## 1.10.0
+
+### Minor Changes
+
+- 05f51e8: use vitest
+
+### Patch Changes
+
+- f8f30d6: use pnpm@v7
+
 ## 1.9.1
 
 ### Patch Changes
