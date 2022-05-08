@@ -24,7 +24,11 @@ export default defineConfig([
         devDeps: false,
       }),
       commonjs(),
-      typescript(),
+      typescript({
+        // rollup-plugin-typescript2 can not process alias on emit types
+        // require ttypescript tranform alias
+        typescript: require('ttypescript'),
+      }),
       alias({
         resolve: ['.ts', '.js', '.tsx', '.jsx'],
         entries: [{ find: '@/', replacement: './src/' }],

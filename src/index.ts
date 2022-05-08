@@ -1,6 +1,8 @@
-import { Table } from './md'
+import { Table } from '@/md'
 
-Table()
+export const display = (): ReturnType<typeof Table> => {
+  return Table()
+}
 
 export const welcome = () => {
   console.log('hello world')
