@@ -1,5 +1,11 @@
 # @aiou/rollup-template
 
+## 1.10.1
+
+### Patch Changes
+
+- 7df83ac: fix alias in emit types
+
 ## 1.10.0
 
 ### Minor Changes
