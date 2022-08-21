@@ -1,5 +1,11 @@
 # @aiou/rollup-template
 
+## 1.10.2
+
+### Patch Changes
+
+- 3d56656: build before publish
+
 ## 1.10.1
 
 ### Patch Changes
