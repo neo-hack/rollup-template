@@ -6,11 +6,13 @@
 
 ## features
 
+- ⚡ Fast - Build with [`rollup-plugin-esbuild`](https://github.com/egoist/rollup-plugin-esbuild)
 - 📊 Stats - output bag bundlesize
 - 📦 Exclude `dependencies` and `peerDependencies`, and bundle `devDependencies`
-- 💪 Typescript - type safe
-- 🃏 Auto setup package condition exports
+- 💪 Typescript - type safe, support alias path with [`ttypescript`](https://github.com/cevek/ttypescript/tree/master/packages/ttypescript)
+- 🃏 Auto setup package condition exports with [`rollup-plugin-condition-exports`](https://github.com/JiangWeixian/rollup-plugin-condition-exports/tree/master)
 - ✅ Vitest
+- 📦 Publish with `changesets`
 
 ## install
 
