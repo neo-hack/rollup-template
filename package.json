@@ -1,6 +1,6 @@
 {
   "name": "@aiou/rollup-template",
-  "version": "1.10.2",
+  "version": "1.11.0",
   "license": "MIT",
   "packageManager": "pnpm@7.23.0",
   "homepage": "https://github.com/neo-hack/rollup-template#readme",

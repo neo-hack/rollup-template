@@ -1,5 +1,15 @@
 # @aiou/rollup-template
 
+## 1.11.0
+
+### Minor Changes
+
+- 45d0c0a: upgrade rollup3
+
+### Patch Changes
+
+- b29784f: build with esbuild
+
 ## 1.10.2
 
 ### Patch Changes
