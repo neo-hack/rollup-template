@@ -1,11 +1,12 @@
 import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
-import typescript from 'rollup-plugin-typescript2'
+import esbuild from 'rollup-plugin-esbuild'
 import { externals } from 'rollup-plugin-node-externals'
 import alias from '@rollup/plugin-alias'
 import size from 'rollup-plugin-filesize'
 import ce from 'rollup-plugin-condition-exports'
 import { defineConfig } from 'rollup'
+import path from 'node:path'
 
 export default defineConfig([
   // CommonJS (for Node) and ES module (for bundlers) build.
@@ -24,14 +25,17 @@ export default defineConfig([
         devDeps: false,
       }),
       commonjs(),
-      typescript({
-        // rollup-plugin-typescript2 can not process alias on emit types
-        // require ttypescript tranform alias
-        typescript: require('ttypescript'),
+      esbuild({
+        target: 'node14'
       }),
       alias({
-        resolve: ['.ts', '.js', '.tsx', '.jsx'],
-        entries: [{ find: '@/', replacement: './src/' }],
+        customResolver: resolve({ extensions: ['.tsx', '.ts'] }),
+        entries: Object.entries({
+          '@/*': ['./src/*'],
+        }).map(([alias, value]) => ({
+          find: new RegExp(`${alias.replace('/*', '')}`),
+          replacement: path.resolve(process.cwd(), `${value[0].replace('/*', '')}`),
+        })),
       }),
       resolve(),
       /**
