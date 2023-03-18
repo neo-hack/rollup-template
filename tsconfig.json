@@ -6,6 +6,8 @@
     "importHelpers": true,
     "esModuleInterop": true,
     "sourceMap": true,
+    "declarationDir": "dist",
+    "emitDeclarationOnly": true,
     "declaration": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
