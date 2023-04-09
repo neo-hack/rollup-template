@@ -1,5 +1,11 @@
 # @aiou/rollup-template
 
+## 1.11.1
+
+### Patch Changes
+
+- 16285b0: pin pnpm version
+
 ## 1.11.0
 
 ### Minor Changes
