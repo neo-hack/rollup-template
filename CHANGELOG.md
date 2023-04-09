@@ -1,5 +1,11 @@
 # @aiou/rollup-template
 
+## 1.11.2
+
+### Patch Changes
+
+- 805a40b: add workflow permissons required by github workflow breaking changes
+
 ## 1.11.1
 
 ### Patch Changes
