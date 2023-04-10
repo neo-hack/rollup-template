@@ -1,5 +1,11 @@
 # @aiou/rollup-template
 
+## 1.11.3
+
+### Patch Changes
+
+- a0a1e5d: use changset/actions@v1
+
 ## 1.11.2
 
 ### Patch Changes
