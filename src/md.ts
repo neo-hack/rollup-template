@@ -10,7 +10,7 @@ export const Table = () => {
       {
         dataIndex: '',
         title: 'NAME',
-        render: (v) => v.name,
+        render: v => v.name,
       },
     ],
     dataSource: [
