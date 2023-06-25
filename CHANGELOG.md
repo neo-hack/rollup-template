@@ -1,5 +1,20 @@
 # @aiou/rollup-template
 
+## 2.0.0
+
+### Major Changes
+
+- 5128738: deprecate node14
+
+### Minor Changes
+
+- 5128738: upgrade eslint-config & add pre-merge
+
+### Patch Changes
+
+- 5128738: upgrade vitest
+- 5128738: use current repo ts version
+
 ## 1.11.3
 
 ### Patch Changes
