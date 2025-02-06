@@ -4,7 +4,7 @@ import alias from '@rollup/plugin-alias'
 import commonjs from '@rollup/plugin-commonjs'
 import resolve from '@rollup/plugin-node-resolve'
 import { defineConfig } from 'rollup'
-import ce from 'rollup-plugin-condition-exports'
+// import ce from 'rollup-plugin-condition-exports'
 import esbuild from 'rollup-plugin-esbuild'
 import size from 'rollup-plugin-filesize'
 import { externals } from 'rollup-plugin-node-externals'
@@ -43,7 +43,7 @@ export default defineConfig([
        * Auto setup package.json
        * @see {@link https://github.com/JiangWeixian/rollup-plugin-condition-exports}
        */
-      ce(),
+      // ce(),
       size(),
     ],
     output: [
