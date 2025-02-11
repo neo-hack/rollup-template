@@ -46,9 +46,6 @@
     "ci:prerelease": "pnpm run build && pnpm changeset publish --no-git-tag --snapshot",
     "lint:fix": "eslint . --fix"
   },
-  "lint-staged": {
-    "**/**/*.{js,ts,tsx,json,yml,yaml,md}": ["eslint --fix"]
-  },
   "dependencies": {
     "functional-md": "1.1.0"
   },
