@@ -1,5 +1,11 @@
 # @aiou/rollup-template
 
+## 3.0.0
+
+### Major Changes
+
+- 8fbeafa: upgrade pnpm@9 eslint@8 vitest@latest ts@5 etc..
+
 ## 2.0.0
 
 ### Major Changes
