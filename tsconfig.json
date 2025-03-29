@@ -1,10 +1,10 @@
 {
+  "extends": "@tsconfig/node20/tsconfig.json",
   "compilerOptions": {
-    "target": "es5",
     "experimentalDecorators": true,
     "baseUrl": ".",
-    "module": "esnext",
-    "moduleResolution": "node",
+    "module": "ES2022",
+    "moduleResolution": "bundler",
     "paths": {
       "@/*": ["src/*"]
     },
@@ -18,8 +18,8 @@
     "importHelpers": true,
     "sourceMap": true,
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
     "plugins": [
       { "transform": "typescript-transform-paths" },
       {
