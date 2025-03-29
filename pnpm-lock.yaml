@@ -13,8 +13,8 @@ importers:
         version: 1.1.0
     devDependencies:
       '@aiou/eslint-config':
-        specifier: ^1.2.1
-        version: 1.5.0(eslint@8.57.1)(tailwindcss@3.4.17)(typescript@5.3.2)
+        specifier: ^1.5.1
+        version: 1.5.1(eslint@8.57.1)(tailwindcss@3.4.17)(typescript@5.3.2)
       '@aiou/remark-config':
         specifier: 0.2.0
         version: 0.2.0
@@ -30,6 +30,9 @@ importers:
       '@rollup/plugin-node-resolve':
         specifier: 16.0.0
         version: 16.0.0(rollup@4.34.4)
+      '@tsconfig/node20':
+        specifier: ^20.1.5
+        version: 20.1.5
       '@types/node':
         specifier: 18.19.75
         version: 18.19.75
@@ -78,9 +81,6 @@ importers:
       ts-patch:
         specifier: 3.1.1
         version: 3.1.1
-      tslib:
-        specifier: 2.4.0
-        version: 2.4.0
       typescript:
         specifier: 5.3.2
         version: 5.3.2
@@ -93,8 +93,8 @@ importers:
 
 packages:
 
-  '@aiou/eslint-config@1.5.0':
-    resolution: {integrity: sha512-Rpmffw5KoAoOPoajHaugjc88HcldFYZ+bjzeZnkh1lLCjrjsqLvhO08KT9qbXhLcIhmMEZif4zQC1vH4cVewOA==}
+  '@aiou/eslint-config@1.5.1':
+    resolution: {integrity: sha512-IJNpFR8rW52wPCHAtJrugcmWiJuRQuXP6FoadASvjqyNJVJyQVzpXGHTFUkZQzysNOsJlrlWkTfppes7pna0hQ==}
     engines: {node: '>=16'}
     peerDependencies:
       eslint: '>=7.4.0 || ^8.53.0'
@@ -631,6 +631,9 @@ packages:
   '@tootallnate/once@1.1.2':
     resolution: {integrity: sha512-RbzJvlNzmRq5c3O09UipeuXno4tA1FE6ikOjxZK0tuxVv3412l64l5t1W5pj4+rJq9vpkm/kwiR07aZXnsKPxw==}
     engines: {node: '>= 6'}
+
+  '@tsconfig/node20@20.1.5':
+    resolution: {integrity: sha512-Vm8e3WxDTqMGPU4GATF9keQAIy1Drd7bPwlgzKJnZtoOsTm1tduUTbDjg0W5qERvGuxPI2h9RbMufH0YdfBylA==}
 
   '@types/concat-stream@2.0.3':
     resolution: {integrity: sha512-3qe4oQAPNwVNwK4C9c8u+VJqv9kez+2MR4qJpoPFfXtgxxif1QbFusvXzK0/Wra2VX07smostI2VMmJNSpZjuQ==}
@@ -1473,6 +1476,7 @@ packages:
   eslint-define-config@2.1.0:
     resolution: {integrity: sha512-QUp6pM9pjKEVannNAbSJNeRuYwW3LshejfyBBpjeMGaJjaDUpVps4C6KVR8R7dWZnD3i0synmrE36znjTkJvdQ==}
     engines: {node: '>=18.0.0', npm: '>=9.0.0', pnpm: '>=8.6.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
   eslint-etc@5.2.1:
     resolution: {integrity: sha512-lFJBSiIURdqQKq9xJhvSJFyPA+VeTh5xvk24e8pxVL7bwLBtGF60C/KRkLTMrvCZ6DA3kbPuYhLWY0TZMlqTsg==}
@@ -4343,7 +4347,7 @@ packages:
 
 snapshots:
 
-  '@aiou/eslint-config@1.5.0(eslint@8.57.1)(tailwindcss@3.4.17)(typescript@5.3.2)':
+  '@aiou/eslint-config@1.5.1(eslint@8.57.1)(tailwindcss@3.4.17)(typescript@5.3.2)':
     dependencies:
       '@aiou/eslint-ignore': 0.5.2
       '@aiou/eslint-plugin-progress': 0.3.1(eslint@8.57.1)
@@ -4980,6 +4984,8 @@ snapshots:
       - typescript
 
   '@tootallnate/once@1.1.2': {}
+
+  '@tsconfig/node20@20.1.5': {}
 
   '@types/concat-stream@2.0.3':
     dependencies:
