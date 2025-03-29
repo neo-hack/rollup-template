@@ -14,6 +14,7 @@
     "noUnusedLocals": true,
     "declaration": true,
     "declarationDir": "dist",
+    "declarationMap": true,
     "emitDeclarationOnly": true,
     "importHelpers": true,
     "sourceMap": true,
