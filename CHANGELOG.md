@@ -1,5 +1,15 @@
 # @aiou/rollup-template
 
+## 4.0.0
+
+### Major Changes
+
+- c1dd757: node20
+
+### Patch Changes
+
+- c1dd757: enable declationmap for better code-editor interaction
+
 ## 3.0.0
 
 ### Major Changes
